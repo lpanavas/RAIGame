@@ -5,63 +5,73 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
+    <div id="intro">
+      <h1>Welcome to the AI Regulation Game!</h1>
+      <p>
+        The European Union has just passed the AI Act, a significant regulation
+        on AI technology, aimed at ensuring safe and lawful use of AI.
+      </p>
+      <p>
+        In this game, you'll be required to categorize different uses of AI into
+        three groups:
+      </p>
+      <ol>
+        <li>
+          <strong>Never Allowed</strong>: These are applications of AI that are
+          completely banned under the AI Act due to potential harm or violation
+          of human rights.
+        </li>
+        <li>
+          <strong>High Risk</strong>: These AI applications are not banned, but
+          are subject to strict regulatory requirements due to their potential
+          to cause harm or adverse impact.
+        </li>
+        <li>
+          <strong>Low Risk</strong>: These are AI applications that pose minimal
+          risk to individual rights or safety and have less stringent regulatory
+          requirements.
+        </li>
+      </ol>
+      <p>
+        For every correctly placed AI use case, you'll earn points. The base
+        score is 10 points, and you'll earn an additional 2 points for each card
+        already in the bucket. However, if you place a use case in the wrong
+        category, you'll receive a penalty which subtracts from your total
+        score. The base penalty is 20 points, and you'll lose an additional 4
+        points for each card already in the bucket.
+      </p>
+      <p>
+        Your objective is to maximize your score by accurately categorizing as
+        many AI use cases as possible. Remember, once you place a card in a
+        bucket, you cannot move it. Choose wisely and good luck!
+      </p>
+    </div>
+
     <div id="cardsContainer">
-      <div class="card" id="card1" draggable="true">
-        <p>Use 1: Unlocking Smartphones</p>
-      </div>
-
-      <div class="card" id="card2" draggable="true">
-        <p>Use 2: Airport Security</p>
-      </div>
-
-      <div class="card" id="card3" draggable="true">
-        <p>Use 3: Surveillance Cameras</p>
-      </div>
-
-      <div class="card" id="card4" draggable="true">
-        <p>Use 4: Social Media Tagging</p>
-      </div>
-
-      <div class="card" id="card5" draggable="true">
-        <p>Use 5: Ethnicity Detection</p>
-      </div>
-
-      <div class="card" id="card6" draggable="true">
-        <p>Use 6: Healthcare Biometrics</p>
-      </div>
-
-      <div class="card" id="card7" draggable="true">
-        <p>Use 7: Personalized Marketing</p>
-      </div>
-
-      <div class="card" id="card8" draggable="true">
-        <p>Use 8: Predictive Policing</p>
-      </div>
-
-      <div class="card" id="card9" draggable="true">
-        <p>Use 9: Retail Experience</p>
-      </div>
-
-      <div class="card" id="card10" draggable="true">
-        <p>Use 10: Automated Vehicles</p>
-      </div>
+      <!-- Cards will be populated from JavaScript -->
     </div>
-
+    <div id="scoreContainer">
+      <h2>Your Score: <span id="score">0</span></h2>
+    </div>
     <div id="bucketsContainer">
-      <div class="bucket" id="bucket1">
-        <h2>Never Allowed</h2>
+      <div id="bucket1" class="bucket">
+        <h2>Unacceptable Use</h2>
+        <div class="depositArea"></div>
+        <div class="cardsArea"></div>
       </div>
 
-      <div class="bucket" id="bucket2">
+      <div id="bucket2" class="bucket">
         <h2>High Risk</h2>
+        <div class="depositArea"></div>
+        <div class="cardsArea"></div>
       </div>
 
-      <div class="bucket" id="bucket3">
+      <div id="bucket3" class="bucket">
         <h2>Low Risk</h2>
+        <div class="depositArea"></div>
+        <div class="cardsArea"></div>
       </div>
     </div>
-
-    <button id="submit">Submit</button>
 
     <script src="scripts.js"></script>
   </body>

@@ -10,7 +10,7 @@ class Application(tk.Frame):
         self.grid()
         self.responses = []
         self.scores = []
-        openai.api_key = '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'
+        openai.api_key = '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'
         self.create_widgets()
 
     def create_widgets(self):
